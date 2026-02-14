@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Happy Valentine's Day, Rea Mae 💕</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-background" id="heartsBackground"></div>
+    
+    <!-- Sparkles -->
+    <div class="sparkles" id="sparkles"></div>
+    
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1 class="main-title">Happy Valentine's Day, Rea Mae 💕</h1>
+        <p class="welcome-message">
+            <strong>Rea Mae T. Royandoyan</strong>, from the moment you came into my life, 
+            everything became brighter, softer, and more beautiful. This little surprise 
+            is just a small reminder of how deeply I love you. 💖
+        </p>
+        <button class="romantic-button" id="loveButton">
+            <span style="position: relative; z-index: 1;">Click here, my love 💗</span>
+        </button>
+    </div>
+    
+    <!-- Floating Petals (appears after button click) -->
+    <div class="petals-container" id="petalsContainer"></div>
+    
+    <!-- Main Content (Hidden Initially) -->
+    <div class="main-content" id="mainContent">
+        <!-- Animated Rose -->
+        <div class="rose-container">
+            <div class="rose">🌹</div>
+        </div>
+        
+        <!-- Love Letter -->
+        <div class="love-letter">
+            <h2>My Dearest Rea Mae,</h2>
+            <p>
+                You are my favorite person, my safe place, my happiness, and my forever Valentine. 
+                Every smile you give me feels like magic. ✨
+            </p>
+            <p>
+                I am so lucky to love you, to hold your hand, to see your beautiful face every day, 
+                and to call you mine. You make every moment sweeter. 💕
+            </p>
+            <p>
+                Thank you for being you — for your kindness, your warmth, your laughter, and your love. 
+                Today and always, you are my greatest blessing. 🌸
+            </p>
+            <p style="font-size: 1.5rem; margin-top: 30px;">
+                I love you so much endlessly, Rea Mae. 💖
+            </p>
+        </div>
+        
+        <!-- Photo Gallery -->
+        <div class="photo-gallery">
+            <h2 class="gallery-title">Our Beautiful Memories 📸</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Pictures/pic1.jpg" alt="Memory 1">
+                    <div class="photo-caption">Our Swimming date 💕</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Pictures/pic2.jpg" alt="Memory 2">
+                    <div class="photo-caption">Together Forever 💖</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Pictures/pic3.jpg" alt="Memory 3">
+                    <div class="photo-caption">Your Beautiful Smile ✨</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Pictures/pic4.jpg" alt="Memory 4">
+                    <div class="photo-caption">My Favorite Person 🌸</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="Pictures/pic5.jpg" alt="Memory 5">
+                    <div class="photo-caption">I Love You 💗</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for enlarged images -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <audio id="backgroundMusic" loop>
+    <source src="Pictures/ArawAraw.mp3" type="audio/mpeg">
+    </audio>
+
+    
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicControl" style="display: none;">🎵 Music ON</button>
+    
+        <script src="script.js"></script>
+</body>
+</html>

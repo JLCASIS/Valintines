@@ -1,0 +1,565 @@
+/* ========================================
+           🌸 CUSTOMIZATION GUIDE 🌸
+           ======================================== */
+
+/* 
+        📝 TO PERSONALIZE THIS FOR YOUR LOVE:
+        
+        1. CHANGE HER NAME:
+           - Search for "Rea Mae" and replace with her name
+           - Search for "Rea Mae T. Royandoyan" for full name
+        
+        2. EDIT LOVE MESSAGES:
+           - Line 380-390: Welcome message
+           - Line 415-420: Main love letter
+        
+        3. REPLACE PHOTOS:
+           - Line 440-470: Photo gallery images
+           - Replace placeholder URLs with your real photos
+           - Upload your photos to imgur.com or use local files
+        
+        4. ADD YOUR MUSIC:
+           - Line 500: Replace music URL with your romantic song
+           - Use MP3 format for best compatibility
+        */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd6e8 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ========================================
+           💖 FLOATING HEARTS BACKGROUND
+           ======================================== */
+
+.hearts-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(255, 105, 180, 0.6);
+    animation: float-up 10s infinite ease-in;
+}
+
+.heart:nth-child(2n) {
+    color: rgba(255, 182, 193, 0.5);
+    font-size: 16px;
+    animation-duration: 12s;
+}
+
+.heart:nth-child(3n) {
+    color: rgba(255, 20, 147, 0.4);
+    font-size: 24px;
+    animation-duration: 15s;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+           🌸 SPARKLE EFFECTS
+           ======================================== */
+
+.sparkles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: sparkle-twinkle 3s infinite;
+}
+
+@keyframes sparkle-twinkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+           💕 WELCOME SCREEN
+           ======================================== */
+
+.welcome-screen {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.welcome-screen.fade-out {
+    animation: fadeOut 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #ff1493;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+    animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    from {
+        text-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+    }
+
+    to {
+        text-shadow: 0 0 40px rgba(255, 20, 147, 0.6);
+    }
+}
+
+.welcome-message {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #8b4789;
+    max-width: 700px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in 0.5s both;
+}
+
+.romantic-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+    transition: all 0.3s ease;
+    animation: float-button 3s infinite ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.romantic-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.romantic-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.romantic-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);
+}
+
+@keyframes float-button {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ========================================
+           🌹 MAIN CONTENT (AFTER BUTTON CLICK)
+           ======================================== */
+
+.main-content {
+    display: none;
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.main-content.active {
+    display: block;
+}
+
+/* ========================================
+           🌹 ANIMATED ROSE
+           ======================================== */
+
+.rose-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    animation: fadeIn 2s ease-in;
+}
+
+.rose {
+    font-size: 120px;
+    animation: bloom 3s ease-out, pulse 2s infinite 3s;
+    filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
+}
+
+@keyframes bloom {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ========================================
+           💌 LOVE LETTER SECTION
+           ======================================== */
+
+.love-letter {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+    animation: fadeIn 2s ease-in 1s both;
+    backdrop-filter: blur(10px);
+}
+
+.love-letter h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #ff1493;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.love-letter p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #6b4668;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+           📸 PHOTO GALLERY
+           ======================================== */
+
+.photo-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in 1.5s both;
+}
+
+.gallery-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    aspect-ratio: 1;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 20, 147, 0.9), transparent);
+    color: white;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .photo-caption {
+    transform: translateY(0);
+}
+
+/* ========================================
+           🖼️ MODAL FOR IMAGE POPUP
+           ======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ff69b4;
+    transform: rotate(90deg);
+}
+
+/* ========================================
+           🎵 MUSIC CONTROLS (OPTIONAL)
+           ======================================== */
+
+.music-control {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 5px 20px rgba(255, 20, 147, 0.5);
+    transition: all 0.3s ease;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 20, 147, 0.7);
+}
+
+/* ========================================
+           📱 MOBILE RESPONSIVE
+           ======================================== */
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .welcome-message {
+        font-size: 1.1rem;
+    }
+
+    .romantic-button {
+        font-size: 1.2rem;
+        padding: 15px 35px;
+    }
+
+    .rose {
+        font-size: 80px;
+    }
+
+    .love-letter {
+        padding: 30px 20px;
+    }
+
+    .love-letter h2 {
+        font-size: 2rem;
+    }
+
+    .love-letter p {
+        font-size: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .close-modal {
+        right: 20px;
+        font-size: 40px;
+    }
+}
+
+/* ========================================
+           🌸 FLOATING PETALS ANIMATION
+           ======================================== */
+
+.petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.petal {
+    position: absolute;
+    font-size: 30px;
+    animation: fall 10s infinite linear;
+    opacity: 0.7;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
